@@ -41,11 +41,12 @@ const postData = async (url, data) => {
 const bindPostData = (form) => {
     button.onclick = async (event) => {
         event.preventDefault()
-        const formData = await new FormData(form)
-        const obj = {}
-        await formData.forEach((item, i) => obj[i] = item)
-        obj["password_confirm"] = passwordRepeat.value;
-        const json = await JSON.stringify(obj)
+        const obj = {
+            "username":name.value,
+            "password":password.value,
+            "password_confirm" : passwordRepeat.value
+        }
+        const json = JSON.stringify(obj)
         if (name.value === '') {
             return alert('Ismingizni kiriting!')
         }
