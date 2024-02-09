@@ -21,8 +21,8 @@ passes.forEach(input => {
     }
 })
 
-const postData = async (url, data) => {
-    const response = await fetch(url, {
+const postData =  (url, data) => {
+    const response = fetch(url, {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: data
@@ -45,23 +45,23 @@ const bindPostData = (form) => {
             "username":name.value,
             "password":password.value,
             "password_confirm" : passwordRepeat.value
-        }
+        };
         const json = JSON.stringify(obj)
-        if (name.value === '') {
-            return alert('Ismingizni kiriting!')
-        }
-        if (password.value === '') {
-            return alert('Parol kiriting!')
-        }
-        if (password.value.length < 8) {
-            return alert("Eng kamida 8 belgi bo'lishishi shart")
-        }
-        if (passwordRepeat.value === '') {
-            return alert('Parolni qayta kiriting!')
-        }
+        // if (name.value === '') {
+        //     return alert('Ismingizni kiriting!')
+        // }
+        // if (password.value === '') {
+        //     return alert('Parol kiriting!')
+        // }
+        // if (password.value.length < 8) {
+        //     return alert("Eng kamida 8 belgi bo'lishishi shart")
+        // }
+        // if (passwordRepeat.value === '') {
+        //     return alert('Parolni qayta kiriting!')
+        // }
         if (password.value === passwordRepeat.value) {
             console.log(obj);
-            return postData("https://a60d-89-249-60-119.ngrok-free.app/api/users/", json)
+            return postData("http://10.0.102.131:8000/api/users/", json)
         }
         else {
             return alert('Parol most emas!')
