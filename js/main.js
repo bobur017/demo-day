@@ -60,7 +60,7 @@ const bindPostData = (form) => {
         }
         if (password.value === passwordRepeat.value) {
             console.log(obj);
-            return postData("http://10.0.102.131:8000/api/users/", json)
+            return postData("https://a60d-89-249-60-119.ngrok-free.app/api/users/", json)
         }
         else {
             return alert('Parol most emas!')
