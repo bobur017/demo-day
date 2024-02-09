@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-    background: url("../img/unsplash.png") center no-repeat;
+    background: url("../img/demo-day-bg.jpg") center no-repeat;
     background-size: cover;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
