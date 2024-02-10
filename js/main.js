@@ -28,6 +28,7 @@ const postData = async (url, formdata) => {
         body: formdata,
     };
 
+
     fetch(url, requestOptions)
         .then(response => response)
         .then(result => resultData(result))
@@ -62,18 +63,18 @@ form.addEventListener("submit", (e) => {
 })
 function validate() {
     let validated = false;
-    // if (form.username.value === '') {
-    //     alert('Ismingizni kiriting!')
-    // } else if (form.password.value === '') {
-    //     alert('Parol kiriting!')
-    // } else if (form.password.value.length < 8) {
-    //     alert("Eng kamida 8 belgi bo'lishishi shart")
-    // } else if (form.password.value === '') {
-    //     alert('Parolni qayta kiriting!')
-    // } else if (form.password.value === form.password_confirm.value) {
-    //     return true;
-    // } else {
-    //     alert('Parol mos emas!')
-    // }
+    if (form.username.value === '') {
+        alert('Ismingizni kiriting!')
+    } else if (form.password.value === '') {
+        alert('Parol kiriting!')
+    } else if (form.password.value.length < 8) {
+        alert("Eng kamida 8 belgi bo'lishishi shart")
+    } else if (form.password.value === '') {
+        alert('Parolni qayta kiriting!')
+    } else if (form.password.value === form.password_confirm.value) {
+        // return true;
+    } else {
+        alert('Parol mos emas!')
+    }
     return validated;
 }

@@ -1,5 +1,3 @@
-import { baseUrl } from "./main";
-
 let tableBody = document.getElementById('tableBody');
 let tds = document.getElementsByTagName('td');
 
