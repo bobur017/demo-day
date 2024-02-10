@@ -13,7 +13,7 @@ function tableAddWithUSer(data) {
     });
 }
 
-fetch("http://10.0.102.131:8000/api/users/").then(res => res.json())
+fetch("https://6e74-89-249-60-119.ngrok-free.app/api/users/").then(res => res.json())
     .then(data => tableAddWithUSer(data))
     .catch(error => console.error('Fetch error:', error));
 

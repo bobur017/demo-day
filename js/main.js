@@ -6,7 +6,7 @@ let eyes = document.querySelectorAll('.eye');
 let input = document.querySelectorAll('input');
 
 function baseUrl() {
-    return "http://10.0.102.131:8000/api/users/";
+    return "https://6e74-89-249-60-119.ngrok-free.app/api/users/";
 }
 
 const resultData = (response) => {
@@ -72,7 +72,7 @@ function validate() {
     } else if (form.password.value === '') {
         alert('Parolni qayta kiriting!')
     } else if (form.password.value === form.password_confirm.value) {
-        // return true;
+        return true;
     } else {
         alert('Parol mos emas!')
     }
